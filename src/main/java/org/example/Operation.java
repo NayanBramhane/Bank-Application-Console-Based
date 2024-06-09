@@ -6,7 +6,7 @@ public class Operation {
     public static void bankinfo() {
         Scanner scan = new Scanner(System.in);
         System.out.println(" ----------------------------------------------------------------------------------------------------------------------------------------------------------------");
-        System.out.println(" ***Banking System Application***");
+        System.out.println(" ***Banking Application***");
         System.out.println(" -----------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
         System.out.println(" 1. Create a new account  \n 2. Check Balance\n 3. Deposit the amount \n 4. Withdraw the amount  \n 5. Watch demo account \n 6. Exit  \n\nENTER YOUR CHOICE :: ");
@@ -15,13 +15,13 @@ public class Operation {
     }
 
     public static void operation(int key) {
-        BankInfo bank = new BankInfo();
         Scanner scan = new Scanner(System.in);
         Process bankprocess = new Process();
         switch (key) {
             case 1:
                 System.out.println(" -----------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 bankprocess.openAccount();
+                System.out.println();
                 System.out.println(" -----------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 System.out.println();
                 System.out.println("MAIN PAGE_:: PRESS 1 ::");
@@ -30,7 +30,6 @@ public class Operation {
                 break;
             case 2:
                 System.out.println(" -----------------------------------------------------------------------------------------------------------------------------------------------------------------");
-
                 bankprocess.checkbalance();
                 System.out.println();
                 System.out.println(" -----------------------------------------------------------------------------------------------------------------------------------------------------------------");
@@ -41,7 +40,7 @@ public class Operation {
             case 3:
                 System.out.println(" -----------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 System.out.println();
-                System.out.println("---------WELCOME TO DEPOSITE PAGE---------------- ");
+                System.out.println("---------------WELCOME TO DEPOSIT PAGE---------------- ");
                 bankprocess.deposit();
                 System.out.println();
                 System.out.println(" -----------------------------------------------------------------------------------------------------------------------------------------------------------------");
@@ -68,7 +67,7 @@ public class Operation {
                     bankinfo();
                 break;
             case 6:
-                System.out.println("THANKS FOR USING OUT BANK APPLICATION");
+                System.out.println("Thank you for using our banking application.");
                 break;
         }
     }
